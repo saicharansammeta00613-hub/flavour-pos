@@ -1,0 +1,17 @@
+{
+  "name": "flavour-pos",
+  "version": "1.0.0",
+  "description": "FLAVOUR - Advanced Restaurant POS & Management System",
+ "scripts": {
+    "predev": "npx kill-port 5000 5173 5174",
+    "dev": "concurrently --raw \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm run dev",
+    "client": "cd frontend && npm run dev",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "build": "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "kill-port": "^2.0.1"
+  }
+}
